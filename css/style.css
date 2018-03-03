@@ -18,8 +18,14 @@ header{
     padding: 13px 25px;
     margin-right:5px;
 }
-.mainMenu li a{
+.mainMenu li:hover{
+    border-bottom: 2px solid #fff;
+    transition:0.5s ease-in ;
+    padding-bottom: 10px;
+}
+.mainMenu li a, .mainMenu li a{
     color: #fff;
+    text-decoration: none;
 }
 
 /* Heder Styling End*/
