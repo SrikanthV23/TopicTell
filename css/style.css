@@ -1,0 +1,40 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+.main{
+    margin: 5px auto;
+    overflow-x: hidden;
+}
+/* Heder Styling Start*/
+header{
+    background:#75b6e5;
+    margin-bottom: 5px;
+}
+.mainMenu li{
+    list-style-type: none;
+    float: left;
+    padding: 13px 25px;
+    margin-right:5px;
+}
+.mainMenu li a{
+    color: #fff;
+}
+
+/* Heder Styling End*/
+
+/* Footer Styling Start*/
+
+/* Footer Styling End*/
+
+/* Login Page Styling Start*/
+.loginWidth{
+    margin:10% auto;
+    width: 50%;
+}
+
+.fontRed{
+    color: red;
+}
+/* Login Page Styling End*/
