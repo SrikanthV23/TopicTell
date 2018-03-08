@@ -1,0 +1,82 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+	</head>
+	<body>
+		<header>
+			<div class="row">
+				<div class="col-md-3">
+					<img src=""/>
+				</div>
+				<div class="col-md-6 text-center">
+					<ul class="mainMenu">
+						<li><a href="home.html">Home</a></li>
+						<li><a href="vacation_planner.html">Vacation Planner</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Conatact Us</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 text-right">
+                    <ul class="mainMenu">
+                        <li><a href="login.html">Log In</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                    </ul>
+                </div>
+			</div>
+		</header>
+		<main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>WellCome to India,<span id="userName"></span></h2>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-12">
+                           <div class="card">
+                               <div class="card-header">
+                                   Trip Duration
+                               </div>
+                               <div class="card-body">
+                                   <h5>How many days are you planning your trip?</h5>
+                                   <input type="text" class="form-control" id="tripDura"/>
+                                   <button class="btn btn-primary btn-sm" onclick="calcDuration();">Submit</button>
+                                <h5 id="hoursDuration"><!-- --></h5>
+                                <h5 id="timeDuration"><!-- --></h5>
+                                <h5 id="tripMessage"><!-- --></h5>
+                                <div class="text-right">
+                                    <button class="btn btn-priamry btn-sm" id="nextBtn">Next</button>
+                                </div>
+                               </div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-12">
+                               <div class="card">
+                                   <div class="card-header">
+                                       Budget Section
+                                   </div>
+                                   <div class="card-body">
+                                       <h5>The Currency of india is Rupees</h5>
+                                      <p>1 USD =60 Rs</p>
+                                      <h5>Enter your budget for total trip</h5>
+                                      <input type="text" class="form-control"/>
+
+                                        <button class="btn btn-priamry btn-sm" onclick="calcBudget()">Budget</button>
+                                    </div>
+                                   </div>
+                               </div>
+                            </div>
+                        </div>
+            </div>
+        </main>
+        <footer>
+            
+        </footer>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/src/script.js"></script>
+	</body>
+</html>
