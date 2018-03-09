@@ -9,7 +9,6 @@ body{
 }
 /* Heder Styling Start*/
 header{
-    background:#75b6e5;
     margin-bottom: 5px;
 }
 .mainMenu li{
@@ -44,3 +43,51 @@ header{
     color: red;
 }
 /* Login Page Styling End*/
+
+/* GST Page */
+#sideMenu{
+    width:16%;
+    float: left;
+    height: 100%;
+    background: rgb(55, 108, 151);
+    padding:0 4px;
+}
+.mainContent{
+    width:84%;
+    float: left;
+}
+#sideMenu ul{
+    padding-left: 20px;
+}
+#sideMenu li{
+    list-style:none;
+    padding: 12px 7px;
+    background: rgb(55, 108, 151);
+    border-bottom: 1px solid #fff;
+}
+#sideMenu li a{
+    color: #fff;
+}
+.innerList ul li{
+    margin-bottom: 1px;
+}
+#sideMenu .fa{
+    font-size: 20px;
+}
+.notification{
+    float: right;
+    padding: 11px 20px;
+}
+.notification li{
+    list-style:none;
+    float: left;
+    margin-left: 5px;
+    padding: 0px 7px;
+    margin-top: 4px;
+}
+.myCalander tr th,.myCalander tr td {
+    text-align: center;
+}
+.myCalander dl dd,.myCalander dl dt{
+    margin-bottom: 5px;
+}

@@ -45,3 +45,5 @@ budgetCalc.onclick = function(){
 	tenDollars.innerHTML = "For 10 USD it costs" +  tenUsd + "Rs";
 	fiveOODollars.innerHTML = "For 500 USD it costs" +  fiveOOUsd + "Rs" ;
 }
+
+
