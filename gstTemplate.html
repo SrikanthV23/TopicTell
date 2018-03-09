@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/font-awesome.css"/>
+		<style>
+			#sideMenu{
+				width:25%;
+				float: left;
+				height: 100%;
+			}
+			.mainContent{
+				width:75%;
+				float: left;
+			}
+			#sideMenu li{
+				list-style:none;
+				padding: 12px 7px;
+				background: rgb(55, 108, 151);
+				margin-bottom: 1px;
+			}
+			#sideMenu li a{
+				color: #fff;
+			}
+			.innerList ul li{
+				margin-bottom: 1px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="">
+			<div class="row">
+				<div id="sideMenu">
+					<ul>
+						<li id="collapseMenu"><a href="#" >Collapse</a></li>
+						<li id="openMenu"><a href="#" >Expand</a></li>
+						<li id="dashBoardMain"><a href="#">Dashboard</a></li>
+						<li id="dashBoard"><a href="#"><i class="fa fa-dashboard fa-2x"><!-- --></i></a></li>
+						<li><a href="#">Create Professional Login</a></li>
+						<li><a href="#">Personal List</a></li>
+						<li><a href="#">Question Bank</a></li>
+						<li class="innerList" id="assList"><a href="#" >Assessment</a>
+							<ul id="asstList" style="display:none">
+								<li><a href="#">Assessment Type</li>
+								<li><a href="#">Assessment Creation</li>
+								<li><a href="#">Assessment List</li>
+							</ul>
+						</li>
+						<li id="learningList"><a href="#" >Learning Module</a>
+							<ul id="learningModList" style="display:none">
+								<li><a href="#">Learning Module Type</a></li>
+								<li><a href="#">Learning Module Creation</a></li>
+								<li><a href="#">Learning Module List</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="mainContent">
+					<div class="col-md-12">
+						<p>
+							Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+							type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+							typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
+							Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	<script src="js/pagejs.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#openMenu").hide();
+			$("#dashBoard").hide();
+			$("#collapseMenu").click(function(){
+				$("#sideMenu").css("width","10%");
+				$(".mainContent").css("width","90%");
+				$("#collapseMenu").hide();
+				$("#openMenu").show();
+				$("#dashBoardMain").hide();
+				$("#dashBoard").show();
+			});
+			$("#openMenu").click(function(){
+				$("#sideMenu").css("width","25%");
+				$(".mainContent").css("width","75%");
+				$("#openMenu").hide();
+				$("#collapseMenu").show();
+				$("#dashBoard").hide();
+				$("#dashBoardMain").show();
+			});
+			$("#assList").click(function(){
+				$("#asstList").toggle();
+			});
+			$("#learningList").click(function(){
+				$("#learningModList").toggle();
+			});
+		});
+	</script>
+	</body>
+</html>
