@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <html>
 	<head>
 		<link rel="stylesheet" href="css/bootstrap.min.css"/>
@@ -36,24 +35,24 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form name="signUpForm" method="post">
+                    <form name="signUpForm">
                         <div class="form-group">
                             <label>User Name/ Email Id</label>
                             <input type="text" class="form-control" name="userName" id="uName" />
-                            <small class="fontRed">Enter valid User name/ Email</small>
+                            <small id="erMsg"><!-- --></small>
                         </div>
                         <div class="form-group">
                             <label>Password</label>
                             <input type="password" class="form-control" name="usePwd" id="uPwd"/>
-                            <small class="fontRed">Check your Password</small>
+                            <small class="fontRed"></small>
                         </div>
                         <div class="form-group">
                             <label>Confirm Password</label>
                             <input type="password" class="form-control" name="confPwd" id="confUPwd"/>
-                            <small class="fontRed">Check your Password</small>
+                            <small id="pwdMisMatch"></small>
                         </div>
                         <div class="form-group text-center">
-                            <button class="btn btn-primary" onclick="validSignUp();">Sign Up</button>
+                            <button class="btn btn-primary" id="validSignUp" type="button">Sign Up</button>
                         </div>
                     </form>
                 </div>
@@ -66,11 +65,34 @@
 </footer>
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/src/script.js"></script>
+        <script src=""></script>
+        <script>
+            $("#validSignUp").click(function(){
+                var formValid=validform();
+                if(formValid){
+                    alert("form submitted");
+                }
+            });
+            function validform(){
+                var useName=document.getElementById("uName").value;
+                var pwd=document.getElementById("uPwd").value;
+                var cPwd=document.getElementById("confUPwd").value;
+                var errMsg =document.getElementById("erMsg");
+                var pwdMatch=document.getElementById("pwdMisMatch");
+                if(useName.value == " " || useName.value == null || pwd.value == " " || pwd.value == null || cPwd.value== " " || cPwd.value== null ){
+                    errMsg.innerHTML +="Please Enter UserName/Email";
+                    pwdMatch.innerHTML +="Password and confirm password doesnot match";
+                    $("#uName").css("border","1px solid red");
+                    $("#uPwd").css("border","1px solid red");
+                    $("#confUPwd").css("border","1px solid red");
+                    return false;
+                }else if(useName.value != null || useName.value != " "){
+                    if(useName){
+                        alert("success");
+                    }
+                }
+            }
+        </script>
 	</body>
-=======
 <html>
-
-<body>Welcome to Sign Up page</body>
->>>>>>> f00d384b6ab3da02b4898533329e72fd23d010c8
 </html>
