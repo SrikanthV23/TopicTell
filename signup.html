@@ -67,28 +67,62 @@
 		<script src="js/bootstrap.min.js"></script>
         <script src=""></script>
         <script>
+            var useName=document.getElementById("uName").value;
+                var pwd=document.getElementById("uPwd").value;
+                var cPwd=document.getElementById("confUPwd").value;
+                var errMsg =document.getElementById("erMsg");
+                var pwdMatch=document.getElementById("pwdMisMatch");
             $("#validSignUp").click(function(){
                 var formValid=validform();
                 if(formValid){
                     alert("form submitted");
                 }
             });
+            $("#confUPwd").keypress(function(){
+                $("#confUPwd").removeClass("errBorder");
+            });
+            $("#uPwd").keypress(function(){
+                $("#uPwd").removeClass("errBorder");
+            });
+            $("#uName").keypress(function(){
+                $("#uName").removeClass("errBorder");
+             
+            });
+            
             function validform(){
                 var useName=document.getElementById("uName").value;
                 var pwd=document.getElementById("uPwd").value;
                 var cPwd=document.getElementById("confUPwd").value;
                 var errMsg =document.getElementById("erMsg");
                 var pwdMatch=document.getElementById("pwdMisMatch");
-                if(useName.value == " " || useName.value == null || pwd.value == " " || pwd.value == null || cPwd.value== " " || cPwd.value== null ){
+                if(useName == "" || useName == null ){
                     errMsg.innerHTML +="Please Enter UserName/Email";
-                    pwdMatch.innerHTML +="Password and confirm password doesnot match";
-                    $("#uName").css("border","1px solid red");
-                    $("#uPwd").css("border","1px solid red");
-                    $("#confUPwd").css("border","1px solid red");
-                    return false;
-                }else if(useName.value != null || useName.value != " "){
-                    if(useName){
-                        alert("success");
+                    $("#uName").addClass("errBorder");
+                
+                }else if(useName != null || useName != " "){
+                     $("#erMsg").hide();
+                    if((pwd == "" || pwd == null) || (cPwd == "" || cPwd == null) ){
+                        pwdMatch.innerHTML +="New Password and confirm password doesnot match";
+                        $("#confUPwd").addClass("errBorder");
+                        $("#uPwd").addClass("errBorder");
+                        document.getElementById("uPwd").value = "";
+                        document.getElementById("confUPwd").value = "";
+                        
+                    }
+                    else if(pwd != " " || cPwd != null){
+                    $("#confUPwd").removeClass("errBorder");
+                        $("#uPwd").removeClass("errBorder");
+                        $("#pwdMisMatch").hide();
+                        if(pwd.length === cPwd.length){
+                            alert(pwd.length + " " + cPwd.length );
+                        }
+                       else{
+                           alert("enter equal no of characters");
+                           $("#confUPwd").addClass("errBorder");
+                        $("#uPwd").addClass("errBorder");
+                        document.getElementById("uPwd").value = "";
+                        document.getElementById("confUPwd").value = "";
+                       }
                     }
                 }
             }

@@ -91,3 +91,13 @@ header{
 .myCalander dl dd,.myCalander dl dt{
     margin-bottom: 5px;
 }
+
+.errBorder{
+    border:1px solid red;
+}
+#erMsg{
+    color:red;
+}
+#pwdMisMatch{
+    color: red;
+}
