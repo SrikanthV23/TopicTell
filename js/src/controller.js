@@ -9,6 +9,7 @@ myApp.controller("signUpController",function($scope) {
         alert("Please fill the fields");
     }
     else {
+        $scope.regexp="^[a-zA-Z0-9_]*$";
       if(userPasword != userconfirmPassword ){
         alert("enter same password");
         $scope.userPwd = "";
