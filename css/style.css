@@ -101,3 +101,6 @@ header{
 #pwdMisMatch{
     color: red;
 }
+.errRed{
+    color: red;
+}
